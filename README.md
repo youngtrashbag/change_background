@@ -43,6 +43,13 @@ simply call `change_background` to pick a random background
 
 or if you have an image you want to set, call `change_background ./wallpaper.png`
 
+add the following to your `.sway/config` file
+
+```
+exec swww-daemon
+exec change_background
+```
+
 ## Customising
 
 The script is extensive by default.
