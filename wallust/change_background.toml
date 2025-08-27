@@ -1,11 +1,8 @@
-# config used to generate background image in 1920x1080 format and set fitting background color
-
 backend = "fastresize"
 color_space = "lab"
-# palette = "dark"
-# palette = "harddark"
 palette = "ansidark"
 saturation = 45
 
 [templates]
 json = { template = "colors.json", target = "~/.cache/wallpapers/colors.json" }
+waybar = { template = "waybar.css", target = "~/.config/waybar/colors.css" }
