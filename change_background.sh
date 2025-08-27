@@ -96,18 +96,18 @@ if [[ ! -z ${SPECIFIC_WALLUST_THEME+x} ]]; then
     wallust theme $SPECIFIC_WALLUST_THEME --quiet --config-file ~/.config/wallust/change_background.toml
 fi
 
-# restart waybar
-# (you can comment this out, if you run this script first and then start waybar)
-if [[ $RESTART_WAYBAR == true ]]; then
-    kill -s SIGUSR2 $(pgrep waybar)
-fi
-
 if [[ -z ${SPECIFIC_WALLUST_THEME+x} ]]; then
     # if no specific theme defined, generate color scheme and set its colors
     wallust run $WALLPAPER_PATH --config-file ~/.config/wallust/change_background.toml
 else
     # generate but dont set global theme colors
     wallust run $WALLPAPER_PATH --skip-sequences --config-file ~/.config/wallust/change_background.toml
+fi
+
+# restart waybar
+# (you can comment this out, if you run this script first and then start waybar)
+if [[ $RESTART_WAYBAR == true ]]; then
+    kill -s SIGUSR2 $(pgrep waybar)
 fi
 
 WALLPAPER_CACHE="$HOME/.cache/wallpapers"

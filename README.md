@@ -6,7 +6,7 @@ A script to change your background and colorscheme on your wayland compositor
 
 ## Prerequisites
 
-This script (applying all patches) depends on these programs:
+This script depends on these programs:
 
 - [swww](https://github.com/LGFae/swww)
 - [wallust](https://codeberg.org/explosion-mental/wallust)
