@@ -4,6 +4,10 @@ A script to change your background and colorscheme on your wayland compositor
 
 > Note: I use sway, this has not been tested on other window managers
 
+![Example image](./docs/example.png)
+
+![Video demo](./docs/demo.mp4)
+
 ## Prerequisites
 
 This script depends on these programs:
@@ -65,4 +69,4 @@ Any contributions welcome!
 I am a beginner in bash scripting and honestly had to look up how to do everything.
 
 Upon finishing I asked *Qwen Coder* to check the code and give me feedback.
-(So its not vibe-coded, but vibe-checked I suppose :) )
+(So its not vibe-coded, but vibe-checked I suppose ;) )
