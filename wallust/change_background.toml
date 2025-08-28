@@ -4,5 +4,11 @@ palette = "ansidark"
 saturation = 45
 
 [templates]
+# this is the only line requried for the background setting process
 json = { template = "colors.json", target = "~/.cache/wallpapers/colors.json" }
-waybar = { template = "waybar.css", target = "~/.config/waybar/colors.css" }
+
+# NOTE: ONLY uncomment if you want to apply the color scheme of your image GLOBALLY
+# these will explicitly overwrite the templates you have in your default "wallust.toml" config file
+# waybar = { template = "waybar.css", target = "~/.config/waybar/colors.css" }
+# foot = { template = "foot.ini", target = "~/.config/foot/colors.ini" }
+# fuzzel = { template = "fuzzel.ini", target = "~/.config/fuzzel/colors.ini" }

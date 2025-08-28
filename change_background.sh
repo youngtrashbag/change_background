@@ -64,7 +64,7 @@ source "$ENV_FILE"
 
 if [[ $# -eq 1 ]]; then
     # print help and exit
-    if [[ "$1" -eq "-h" ]] || [[ "$1" -eq "--help" ]]; then
+    if [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
         print_usage
         exit
     fi
@@ -93,7 +93,8 @@ fi
 
 # pick predefined color scheme (optional)
 if [[ ! -z ${SPECIFIC_WALLUST_THEME+x} ]]; then
-    wallust theme $SPECIFIC_WALLUST_THEME --quiet --config-file ~/.config/wallust/change_background.toml
+    # uses the default wallust.toml config file
+    wallust theme $SPECIFIC_WALLUST_THEME --quiet
 fi
 
 if [[ -z ${SPECIFIC_WALLUST_THEME+x} ]]; then
