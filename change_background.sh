@@ -108,7 +108,10 @@ fi
 # restart waybar
 # (you can comment this out, if you run this script first and then start waybar)
 if [[ $RESTART_WAYBAR == true ]]; then
-    kill -s SIGUSR2 $(pgrep waybar)
+    # only restart waybar if process is found
+    if pgrep waybar; then
+        kill -s SIGUSR2 $(pgrep waybar)
+    fi
 fi
 
 WALLPAPER_CACHE="$HOME/.cache/wallpapers"
